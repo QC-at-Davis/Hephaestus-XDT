@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    hephaestus:
+        build:
+            context: .
+            dockerfile: Experimental.Dockerfile
+        ports:
+            - "8888:8888"
+        volumes:
+            - .:/home
+        command: /bin/bash
+        #command: jupyter notebook --ip='*' --port=8888 --no-browser --allow-root --notebook-dir=/home
